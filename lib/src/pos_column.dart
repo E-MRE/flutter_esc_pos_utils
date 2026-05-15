@@ -16,13 +16,14 @@ class PosColumn {
       throw Exception('Column width must be between 1..12');
     }
     if (text.isNotEmpty && textEncoded != null && textEncoded!.isNotEmpty) {
-      throw Exception('Only one parameter - text or textEncoded - should be passed');
+      throw Exception(
+          'Only one parameter - text or textEncoded - should be passed');
     }
   }
 
-  String text;
-  Uint8List? textEncoded;
-  bool containsChinese;
-  int width;
-  PosStyles styles;
+  final String text;
+  final Uint8List? textEncoded;
+  final bool containsChinese;
+  final int width;
+  final PosStyles styles;
 }
